@@ -15,6 +15,7 @@
  */
 
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 25
@@ -58,5 +59,9 @@ dependencies {
     compile('com.google.apis:google-api-services-pubsub:v1-rev12-1.22.0') {
         exclude group: 'org.apache.httpcomponents'
     }
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
+}
+repositories {
+    mavenCentral()
 }
